@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.kpu.myweb.mappers.userMapper">
+
+	<insert id="insert">
+		insert into users (id, passwd, username, pnum, job)
+		values
+		(#{id}, #{passwd}, #{username}, #{pnum}, #{job})
+	</insert>
+
+	<select id="userData" resultType="UserVO">
+		select * from users
+		where
+		id=#{id} and passwd=#{passwd}
+	</select>
+
+	<update id="update">
+		update users set passwd =#{passwd}, username
+		=#{username},
+		pnum =#{pnum}, job =#{job}
+		where id = #{id}
+	</update>
+
+	<delete id="delete">
+		delete from users where id = #{id}
+	</delete>
+</mapper>  

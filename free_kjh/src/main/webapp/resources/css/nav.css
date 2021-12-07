@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+
+/* common */ 
+ul {
+	list-style: none;
+}
+
+/* nav */
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .25em;
+	height: 55px;
+}
+
+nav ul {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0;
+}
+
+nav ul li {
+	padding: 0;
+	margin: 0;
+}
+
+nav ul li a {
+	padding: 1em;
+	font-size: 0.85em;
+	display: flex;
+	align-items: flex-end;
+}
